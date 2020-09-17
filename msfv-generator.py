@@ -58,7 +58,6 @@ def opciones():
 
     """ + Style.RESET_ALL)    
 
-######################Definir opciones con casos: ##################
  
 opciones()
 
@@ -251,10 +250,6 @@ def ncbs():
     print(" ")        
 
 
-
-##########Definicion de casos#####################
-
-
 while True:
     comando=input(Fore.GREEN + "msfvenom-shells$~" + Fore.RESET)
     if(comando=="1"):
@@ -295,6 +290,6 @@ while True:
          sys.exit()         
           
     else:
-        print(Fore.RED + "[-]"+Fore.RESET+ " Command not found!") 
+        print(Fore.RED + "[-]"+Fore.RESET+ " Comando no encontrado!") 
 
         
