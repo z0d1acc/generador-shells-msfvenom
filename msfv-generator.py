@@ -269,7 +269,7 @@ def ncbs():
 
 
 while True:
-    comando=input(Fore.GREEN + "z0diacc$~" + Fore.RESET)
+    comando=input(Fore.GREEN + "msfvenom-gen$~" + Fore.RESET)
     if(comando=="1"):
         lmrs()
     elif(comando=="2"):
