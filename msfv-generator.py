@@ -17,30 +17,15 @@ signal=signal.signal(signal.SIGINT,signal_handler)
 
 def banner():
     print("""  
-                                                                                                                                       
-                                                                                                                                   
-   SSSSSSSSSSSSSSS HHHHHHHHH     HHHHHHHHHEEEEEEEEEEEEEEEEEEEEEELLLLLLLLLLL             LLLLLLLLLLL                SSSSSSSSSSSSSSS 
- SS:::::::::::::::SH:::::::H     H:::::::HE::::::::::::::::::::EL:::::::::L             L:::::::::L              SS:::::::::::::::S
-S:::::SSSSSS::::::SH:::::::H     H:::::::HE::::::::::::::::::::EL:::::::::L             L:::::::::L             S:::::SSSSSS::::::S
-S:::::S     SSSSSSSHH::::::H     H::::::HHEE::::::EEEEEEEEE::::ELL:::::::LL             LL:::::::LL             S:::::S     SSSSSSS
-S:::::S              H:::::H     H:::::H    E:::::E       EEEEEE  L:::::L                 L:::::L               S:::::S            
-S:::::S              H:::::H     H:::::H    E:::::E               L:::::L                 L:::::L               S:::::S            
- S::::SSSS           H::::::HHHHH::::::H    E::::::EEEEEEEEEE     L:::::L                 L:::::L                S::::SSSS         
-  SS::::::SSSSS      H:::::::::::::::::H    E:::::::::::::::E     L:::::L                 L:::::L                 SS::::::SSSSS    
-    SSS::::::::SS    H:::::::::::::::::H    E:::::::::::::::E     L:::::L                 L:::::L                   SSS::::::::SS  
-       SSSSSS::::S   H::::::HHHHH::::::H    E::::::EEEEEEEEEE     L:::::L                 L:::::L                      SSSSSS::::S 
-            S:::::S  H:::::H     H:::::H    E:::::E               L:::::L                 L:::::L                           S:::::S
-            S:::::S  H:::::H     H:::::H    E:::::E       EEEEEE  L:::::L         LLLLLL  L:::::L         LLLLLL            S:::::S
-SSSSSSS     S:::::SHH::::::H     H::::::HHEE::::::EEEEEEEE:::::ELL:::::::LLLLLLLLL:::::LLL:::::::LLLLLLLLL:::::LSSSSSSS     S:::::S
-S::::::SSSSSS:::::SH:::::::H     H:::::::HE::::::::::::::::::::EL::::::::::::::::::::::LL::::::::::::::::::::::LS::::::SSSSSS:::::S
-S:::::::::::::::SS H:::::::H     H:::::::HE::::::::::::::::::::EL::::::::::::::::::::::LL::::::::::::::::::::::LS:::::::::::::::SS 
- SSSSSSSSSSSSSSS   HHHHHHHHH     HHHHHHHHHEEEEEEEEEEEEEEEEEEEEEELLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL SSSSSSSSSSSSSSS   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-
+                                                                                                                                           
+ .oooooo..o ooooo   ooooo oooooooooooo ooooo        ooooo         .oooooo..o 
+d8P'    `Y8 `888'   `888' `888'     `8 `888'        `888'        d8P'    `Y8 
+Y88bo.       888     888   888          888          888         Y88bo.      
+ `"Y8888o.   888ooooo888   888oooo8     888          888          `"Y8888o.  
+     `"Y88b  888     888   888    "     888          888              `"Y88b 
+oo     .d8P  888     888   888       o  888       o  888       o oo     .d8P 
+8""88888P'  o888o   o888o o888ooooood8 o888ooooood8 o888ooooood8 8""88888P'  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
           """ +Fore.YELLOW + """by"""+Fore.RESET + """: Z0diacc | (https://github.com/z0d1acc)
 
     """)
